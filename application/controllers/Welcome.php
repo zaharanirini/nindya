@@ -8,7 +8,8 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->model('M_Barang');
-		
+	}
+	
 	public function index()
 	{
 		$list_barang		= $this->M_Barang->get_databarang();
@@ -19,5 +20,5 @@ class Welcome extends CI_Controller {
 
 		$this->load->view("welcome_message",$data_hal);
 	}
-}
+	
 }
